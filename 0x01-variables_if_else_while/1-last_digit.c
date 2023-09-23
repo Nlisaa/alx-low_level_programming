@@ -2,22 +2,18 @@
 #include <stdlib.h>
 #include <time.h>
 
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
 int main(void)
 {
     int n;
+    int lastDigit;
 
-    srand(time(0)); /* Seed the random number generator */
+    srand(time(0)); // Seed the random number generator
 
-    n = rand(); /* Generate a random number */
+    n = rand(); // Generate a random number
 
     printf("Last digit of %d is ", n);
 
-    int lastDigit = n % 10; /* Calculate the last digit */
+    lastDigit = n % 10; // Calculate the last digit
 
     if (lastDigit > 5)
     {
