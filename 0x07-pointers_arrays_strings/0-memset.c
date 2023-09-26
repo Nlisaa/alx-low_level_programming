@@ -1,23 +1,19 @@
 #include "main.h"
 
 /**
- * print_last_digit - prints the last digit of a number
- * @n: the int to extract the last digit from
- * Return: value of the last digit
+ * _memset - Fills memory with a constant byte.
+ * @s: A pointer to the memory area to be filled.
+ * @b: The constant byte to fill the memory with.
+ * @n: The number of bytes to be filled.
+ *
+ * Return: A pointer to the memory area s.
  */
-int print_last_digit(int n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	int a;
+    unsigned int i;
 
-	if (n < 0)
-		n = -n;
+    for (i = 0; i < n; i++)
+        s[i] = b;
 
-	a = n % 10;
-
-	if (a < 0)
-		a = -a;
-
-	_putchar(a + '0');
-
-	return (a);
+    return (s);
 }
