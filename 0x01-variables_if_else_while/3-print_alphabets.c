@@ -15,7 +15,7 @@ int main(void)
         putchar(alph[i]);
     }
 
-    putchar('\n'); // Use '\n' instead of "/n"
+    putchar('\n'); /* Use '\n' instead of "/n" */
 
-    return (0); // Add a missing semicolon after return statement
+    return (0); /* Add a missing semicolon after return statement */
 }
