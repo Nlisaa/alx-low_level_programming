@@ -15,7 +15,7 @@ int main(void)
         putchar(alp[i]);
     }
 
-    putchar('\n'); // Use '\n' instead of "/n"
+    putchar('\n'); /* Use '\n' instead of "/n" */
 
     return (0);
 }
