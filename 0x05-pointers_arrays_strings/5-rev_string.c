@@ -6,18 +6,19 @@
  */
 void rev_string(char *s)
 {
-	char rev;
-	int counter = 0;
+	int length = 0;
 	int i;
+	char temp;
 
-	while (s[counter] != '\0')
-		counter++;
+	/* Calculate the length of the string */
+	while (s[length] != '\0')
+		length++;
 
-	for (i = 0; i < counter / 2; i++)
+	/* Swap characters from start to end of the string */
+	for (i = 0; i < length / 2; i++)
 	{
-		counter--;
-		rev = s[i];
-		s[i] = s[counter];
-		s[counter] = rev;
+		temp = s[i];
+		s[i] = s[length - i - 1];
+		s[length - i - 1] = temp;
 	}
 }
