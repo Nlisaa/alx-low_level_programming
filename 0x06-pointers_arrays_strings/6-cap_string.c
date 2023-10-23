@@ -8,7 +8,7 @@
 char *cap_string(char *str)
 {
     int i = 0;
-    int capitalize = 1; // A flag to track whether the next character should be capitalized
+    int capitalize = 1;
 
     while (str[i] != '\0')
     {
@@ -21,12 +21,12 @@ char *cap_string(char *str)
         }
         else if (capitalize && str[i] >= 'a' && str[i] <= 'z')
         {
-            str[i] = str[i] - 32; // Convert the first character of the word to uppercase
-            capitalize = 0;      // Reset the flag
+            str[i] = str[i] - 32; 
+            capitalize = 0;      
         }
         else
         {
-            capitalize = 0; // Do not capitalize
+            capitalize = 0; 
         }
         i++;
     }
