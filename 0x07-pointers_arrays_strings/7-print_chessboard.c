@@ -1,18 +1,33 @@
 #include "main.h"
+#include <unistd.h>
+
 /**
- * print_chessboard - Entry point
- * @a: array
+ * _putchar - writes a character to stdout
+ * @c: The character to print
  *
- * Return: Always 0 (Success)
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-void print_chessboard(char (*a)[8]);
+int _putchar(char c)
 {
-	int i
-	int j
-	for (i = 0; i < 0; i++)
-	{
-		for (j = 0; j < 0; j++)
-			_putchar(a[i][j]);
-		_putchar('\n');
-	}
-       
+    return write(1, &c, 1);
+}
+
+/**
+ * print_chessboard - Prints a chessboard
+ * @a: 2D array of characters representing the chessboard
+ *
+ * Description: The chessboard is represented as an 8x8 grid
+ */
+void print_chessboard(char (*a)[8])
+{
+    int i, j;
+    for (i = 0; i < 8; i++)
+    {
+        for (j = 0; j < 8; j++)
+        {
+            _putchar(a[i][j]);
+        }
+        _putchar('\n');
+    }
+}      
